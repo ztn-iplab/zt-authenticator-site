@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZT-Authenticator | Device-bound MFA for modern teams</title>
+    <meta
+      name="description"
+      content="ZT-Authenticator is a lightweight, device-bound authenticator built for resilient MFA, offline-ready TOTP, and secure device approval." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orbit"></div>
+    <div class="bg-grid"></div>
+
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+          </div>
+          <div>
+            <div class="brand-title">ZT-Authenticator</div>
+            <div class="brand-subtitle">Device-bound MFA, built for resilience</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#features">Features</a>
+          <a href="#security">Security</a>
+          <a href="#how">How it works</a>
+          <a href="#adopt">Adoption</a>
+          <a href="#deployment">Deployment</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="header-actions">
+          <a class="ghost" href="#download">Download</a>
+          <a class="primary" href="#contact">Talk to us</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">ZT-IAM compatible. Standalone ready.</p>
+            <h1>
+              A fast, lightweight authenticator that survives unreliable networks.
+            </h1>
+            <p class="lede">
+              ZT-Authenticator pairs device-bound cryptography with TOTP and secure
+              device approval to reduce replay risk, while honoring relying party (RP)
+              policies across domains and tenants.
+            </p>
+            <div class="cta-row">
+              <a class="primary" href="#download">Get the app</a>
+              <a class="ghost" href="#how">See the flow</a>
+            </div>
+            <div class="hero-meta">
+              <div>
+                <span class="meta-label">Core guarantees</span>
+                <span class="meta-value">Offline TOTP • Device approval • Policy-ready</span>
+              </div>
+              <div>
+                <span class="meta-label">Built for</span>
+                <span class="meta-value">ZT-IAM, fintech, telecom, zero-trust teams</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <p class="card-title">Enrollment snapshot</p>
+              <span class="chip">Secure QR</span>
+            </div>
+            <div class="device-figure">
+              <div class="device-screen">
+                <div class="device-header">
+                  <span>ZT-Authenticator</span>
+                  <span class="device-dot"></span>
+                </div>
+                <div class="device-row">
+                  <div>
+                    <p class="device-label">Tenant</p>
+                    <p class="device-value">Acme Zero Trust</p>
+                  </div>
+                  <span class="chip-alt">active</span>
+                </div>
+                <div class="totp">
+                  <span>6-digit TOTP</span>
+                  <strong>482 193</strong>
+                  <small>Device approval required</small>
+                </div>
+                <div class="approval">
+                  <span>Approve sign-in?</span>
+                  <button>Approve</button>
+                </div>
+              </div>
+            </div>
+            <div class="hero-card-footer">
+              <div>
+                <p class="meta-label">Response time</p>
+                <p class="meta-value">&lt; 1s device proof</p>
+              </div>
+              <div>
+                <p class="meta-label">Network mode</p>
+                <p class="meta-value">Offline-ready</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Everything an authenticator should do — and then some.</h2>
+            <p>
+              Lightweight UI, encrypted keys, and flexible enrollment designed for teams
+              that live outside perfect connectivity.
+            </p>
+          </div>
+          <div class="grid-3">
+            <article class="feature-card reveal">
+              <h3>Device-bound approval</h3>
+              <p>
+                Every TOTP verification requires an on-device signature, mitigating
+                replay risks from stolen seeds.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Offline-first TOTP</h3>
+              <p>
+                Generate codes without network access and sync approvals once online.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Multi-tenant ready</h3>
+              <p>
+                Manage multiple environments, label by domain/RP, and switch instantly.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>RP-aware routing</h3>
+              <p>
+                Enrollment ties each account to a relying party domain so policies stay
+                consistent across services.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Adaptive onboarding</h3>
+              <p>
+                QR enrollment auto-detects API base URLs and configures the app on the fly.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Secure transfer</h3>
+              <p>
+                Move accounts with explicit user approval, never silent exports.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Enterprise telemetry</h3>
+              <p>
+                Rich audit trails and device identity hooks for IAM policy engines.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="security" class="section">
+        <div class="container security-grid">
+          <div>
+            <h2>Security is the product.</h2>
+            <p>
+              ZT-Authenticator is engineered for zero-trust environments, blending
+              hardware-backed keys, resilient enrollment, and strict user intent signals.
+            </p>
+            <ul class="checklist">
+              <li>Device keypair sealed with OS keystore or Secure Enclave</li>
+              <li>Enrollment tokens scoped and time-limited</li>
+              <li>Replay-resistant device approvals per login attempt</li>
+              <li>Privacy-first storage with no analytics by default</li>
+            </ul>
+          </div>
+          <div class="security-panel reveal">
+            <div class="panel-row">
+              <span>Key material</span>
+              <strong>Never leaves device</strong>
+            </div>
+            <div class="panel-row">
+              <span>Proof format</span>
+              <strong>P-256 signature + nonce</strong>
+            </div>
+            <div class="panel-row">
+              <span>TOTP key</span>
+              <strong>Encrypted at rest</strong>
+            </div>
+            <div class="panel-row">
+              <span>Compliance</span>
+              <strong>Aligned to NIST MFA guidance</strong>
+            </div>
+            <p class="panel-note">
+              Built to integrate with ZT-IAM policies while remaining portable for other
+              zero-trust stacks.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>How it works</h2>
+            <p>From enrollment to approval, the workflow is intentionally human.</p>
+          </div>
+          <div class="steps">
+            <div class="step reveal">
+              <span class="step-number">01</span>
+              <h3>Scan secure enrollment QR</h3>
+              <p>QR encodes domain, enrollment token, and policy hints.</p>
+            </div>
+            <div class="step reveal">
+              <span class="step-number">02</span>
+              <h3>Generate device keypair</h3>
+              <p>Keys are stored in the OS keystore and never exported.</p>
+            </div>
+            <div class="step reveal">
+              <span class="step-number">03</span>
+              <h3>Approve login requests</h3>
+              <p>Device proof + TOTP used to finalize authentication.</p>
+            </div>
+            <div class="step reveal">
+              <span class="step-number">04</span>
+              <h3>Sync policy feedback</h3>
+              <p>Trust engine receives device response and risk context.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="adopt" class="section">
+        <div class="container adopt-grid">
+          <div>
+            <h2>Adopt ZT-Authenticator in minutes.</h2>
+            <p>
+              Use it with ZT-IAM or plug into your own identity stack. The enrollment
+              payload is extensible and compatible with enterprise policy engines.
+            </p>
+            <div class="adopt-actions">
+              <a class="primary" href="#download">View release builds</a>
+              <a class="ghost" href="#contact">Request integration kit</a>
+            </div>
+          </div>
+          <div class="adopt-card reveal">
+            <h3>Enrollment payload</h3>
+            <pre><code>{
+  "type": "zt_totp_enroll",
+  "account": "alice@company.com",
+  "tenant": "Acme Zero Trust",
+  "api_base_url": "https://tenant.example.com/api/auth",
+  "enroll_token": "...",
+  "rp_id": "tenant.example.com"
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="deployment" class="section">
+        <div class="container deployment-grid">
+          <div>
+            <h2>Deployment options without the pricing noise.</h2>
+            <p>
+              ZT-Authenticator ships with a deployment model that scales from lab
+              testing to enterprise rollouts while keeping RP policies intact.
+            </p>
+          </div>
+          <div class="deployment-cards">
+            <article class="feature-card reveal">
+              <h3>Self-hosted</h3>
+              <p>
+                Run ZT-Authenticator alongside ZT-IAM or your own IAM stack with full
+                control over RP domains and policies.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Managed rollout</h3>
+              <p>
+                We can provision enrollment endpoints, DNS, and RP alignment for you
+                so teams can onboard fast.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Enterprise support</h3>
+              <p>
+                Custom policy packs, audit telemetry, and RP federation guidance for
+                large deployments.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="download" class="section download">
+        <div class="container download-card">
+          <div>
+            <h2>Ready to deploy.</h2>
+            <p>
+              Mobile-first. Lightweight. Built for intermittent connectivity and zero-trust
+              adoption.
+            </p>
+          </div>
+          <div class="download-actions">
+            <a class="primary" href="#">Android APK</a>
+            <a class="ghost" href="#">iOS TestFlight</a>
+            <a class="ghost" href="#">Enterprise builds</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Common questions</h2>
+            <p>What teams ask before rolling out ZT-Authenticator.</p>
+          </div>
+          <div class="faq-grid">
+            <div class="faq-item reveal">
+              <h3>Is ZT-Authenticator tied to ZT-IAM?</h3>
+              <p>
+                No. It integrates tightly with ZT-IAM but supports custom enrollment
+                payloads for any IAM platform.
+              </p>
+            </div>
+            <div class="faq-item reveal">
+              <h3>How do RPs stay consistent?</h3>
+              <p>
+                Each enrollment is bound to a relying party domain so login approvals
+                and policy checks remain scoped to the correct service.
+              </p>
+            </div>
+            <div class="faq-item reveal">
+              <h3>Does it work offline?</h3>
+              <p>
+                Yes. TOTP generation is offline. Device approvals sync once the
+                connection resumes.
+              </p>
+            </div>
+            <div class="faq-item reveal">
+              <h3>How do we handle lost devices?</h3>
+              <p>
+                Admins can revoke device keys and require re-enrollment without leaking
+                seeds.
+              </p>
+            </div>
+            <div class="faq-item reveal">
+              <h3>Can users choose MFA types?</h3>
+              <p>
+                Yes. Policies can enable TOTP, WebAuthn, or both with device approval
+                when required.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container contact-grid">
+          <div>
+            <h2>Let’s secure your rollout.</h2>
+            <p>
+              Share your deployment goals and we’ll provide onboarding kits, sandbox
+              credentials, and integration support.
+            </p>
+          </div>
+          <form class="contact-form">
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Work email" required />
+            <input type="text" placeholder="Company" />
+            <textarea placeholder="Tell us about your deployment" rows="4"></textarea>
+            <button type="submit">Request a walkthrough</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand-title">ZT-Authenticator</div>
+          <p>Device-bound MFA for the real world.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#features">Features</a>
+          <a href="#security">Security</a>
+          <a href="#download">Download</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-meta">
+          <span>© 2025 ZT-Authenticator</span>
+          <span>Built for resilient zero-trust teams.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
